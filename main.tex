@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Dependencies: 
+%		BasicTeX
+%		+ it's packages:
+% 	suffix (in package 'bigfoot')
+%	xargs; now xparse (in 'l3packages')
+%	lipsum
+%	fontawesome
+%			sudo tlmgr install l3packages bigfoot lipsum fontawesome
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,verdana]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\moderncvicons{awesome}
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Zigmārs} % Your first name
+\familyname{Rupenheits} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[0.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+
+\begin{document}
+
+\title{Curriculum Vitae}
+%\address{Slokas 33-15}{}
+\phone[mobile]{(+371) 26291057}
+\email{zigmarrs@gmail.com}
+\homepage{linkedin.com/in/zrupenheits/}% {LinkedIn.com/in/zrupenheits}% The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+%\photo[70pt][0.4pt]{picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{Career Objectives}
+\cvitem{}{ Conscientious electronics and math enthusiast seeking to deepen \& apply knowledge of control theory, signal analysis, physics, computer science and math in practice by designing state-of-the-art electronic devices. 
+Doing it in a systematic \& structured manner. Constantly learning \& striving for efficiency and to solve real-problems. }
+
+\section{Work experience}
+% usage: \cventry[spacing]{years}{degree/job title}{institution/employer}{localization}{optional: grade/...}{optional: comment/job description}
+
+\cventry{2019-present}{Electronics engineer}{Institute of Atomic Physics \& Spectroscopy}{}{}{Medical device system architecture, electronics design \& implementation; supervision of software and case design}
+
+\cventry{2018-2019}{Embedded engineer}{AERONES Ltd.}{}{}{Battery management system HW \& FW troubleshooting, improvements and maintenance, creation of drone's electrical wiring documentation, troubleshooting of drone's altitude hold functionality}
+
+\cventry{2014-2016}{Laboratory technician}{Faculty of Physics \& Mathematics, Nanoelectronics group}{}{}{Modelling and analysis of nonequilibrium quantum statistics of nanoelectronic devices}
+
+\cventry{2014-2015}{Electronics engineer}{Institute of Atomic Physics \& Spectroscopy}{}{}{Hardware and firmware design and maintenance, support of electro-optical devices designed for biomedical measurements}
+
+\cventry{2012-present}{Leader/teacher of Robotics Club}{Riga State Gymnasium No. 1}{}{}{Teaching basics of electronics \& programming and designing DIY mini-sumo robots}
+
+\section{Education}
+
+\cventry{2019-ongoing}{B.S. in Electronics engineering}{Riga Technical University}{}{}{}
+
+\cventry{2016-2018}{M.S. in Theoretical Computer Science}{University of Latvia}{}{}{\textbf{Subjects studied}: Design and analysis of fast algorithms, Number theory, Combinatorics, Graph theory, Probabilistic algorithms, Algorithm complexity, Mathematical methods of cryptography, Quantum computers, Deep machine learning, Digital design (FPGA programming). \\ \textbf{Thesis (in Quantum computation)}: \textit{Exact quantum query algorithms using single-quantum-query subroutines}}
+
+\cventry{2012-2015}{B.S. in Physics}{University of Latvia}{}{}{\textbf{Subjects studied}: Classical mechanics, Electromagnestism, Optics, Electronics, Quantum physics, Linear algebra, Numerical methods, Calculus, Differential equations, Tensor calculus \\ \textbf{Thesis (in Quantum mechanics)}: \textit{Modelling of nonstationary dynamics of electron wavepacket}}
+
+\cventry{2009-2012}{Second. ed., Math \& Physics emphasis}{Riga State Gymnasium No. 1}{}{}{\textbf{Extra subjects}: C++ programming, Robotics}
+
+\section{Technical Skillset}
+\cvitem{Electronics}{Knowledge and experience of basic \textbf{FPGA programming} in \textbf{Verilog}}
+\cvitem{}{Experience doing programming for \textbf{Atmel}, \textbf{STM32} microcontrollers (both in C/C++ and Assembly)}
+\cvitem{}{Good knowledge of real passive component intrinsic properties and their effect on design}
+\cvitem{}{Good knowledge in discrete component selection for a design}
+\cvitem{}{Ability to quickly understand crucial IC datasheet details}
+\cvitem{}{Ability to effectively \textbf{use test equipment} to setup experiments for design verification or characterization}
+\cvitem{}{Proficiency in \textbf{Eagle CAD} (for schematic capture \& \textbf{PCB design})}
+\cvitem{}{Good understanding of \textbf{thermal design}}
+
+
+\cvitem{Programming}{{C, C++}, {Java}, {Haskell}, {Python}, {Scala}, {PHP}, {Verilog}, {ARM Assembly}}
+\cvitem{}{Experience doing Android app programming \& basic iOS app programming}
+\cvitem{}{Solid knowledge in using MS Office and LaTeX}
+\cvitem{}{Experience doing \textbf{3D modelling} in \textbf{SolidWorks} \& printing with 3D printers}
+
+\cvitem{Communication}{}
+\cvitem{Languages}{Latvian -- native}
+\cvitem{		 }{English -- advanced (level C1) }
+\cvitem{		 }{German --  elementary (level A1)}
+
+\section{Electronic/embedded projects}
+
+\cvitem{}{CCD-line sensor reading prototype using ATMEGA328P}
+\cvitem{}{Tone synthesizer and sequencer on STM32L476}
+\cvitem{}{Motor control board implementing FOC (field oriented control) of a 3-phase PMSM (permanent magnet synchronous motor). Cancelled project}
+\cvitem{}{E-ink display driver board}
+
+
+\section{Personal projects}
+\cvitem{}{Well designed lab power supply (\textit{PSL-3604}) build}
+\cvitem{}{GPSDO setup for calibrating OCXOs}
+\cvitem{}{Miniature (battery powered) 8x8 LED matrix badge}
+\cvitem{}{2-wheel balancing robot}
+\cvitem{}{\textit{Ultra-Micron} dosimeter build}
+\cvitem{}{Card game \textit{SET} for Android}
+
+
+\section{Hobbies and other interests}
+\cvitem{}{Reading about analog circuit design techniques}
+\cvitem{}{Repairing electronic test equipment}
+\cvitem{}{Taking electronic test equipment apart and reverse engineering it}
+\cvitem{}{Solving math, algorithmic \& physics problems}
+\cvitem{}{Listening to jazz, classical and funk music}
+\cvitem{}{Playing acoustic music}
+
+
+\end{document}
