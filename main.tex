@@ -1,27 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% "ModernCV" CV and Cover Letter
-% LaTeX Template
-% Version 1.1 (9/12/12)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same 
-% directory as this .tex file. These files provide the resume style and themes 
-% used for structuring the document.
-%
+% Dependencies:
+% * ModernCV 2.0.0 package 
+%	* academicons 
+%	* fontawesome5
+%	* arydshln
+% Install dependencies for TeXLive:
+% 	sudo tlmgr install academicons fontawesome5 arydshln moderncv
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
+%	PACKAGES & DOC CONFIGURATIONS
+%----------------------------------------------------------------------
 
 \documentclass[11pt,a4paper,verdana]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
@@ -32,15 +21,13 @@
 
 \moderncvicons{awesome}
 
-% \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-
 \usepackage[scale=0.75]{geometry} % Reduce document margins
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \firstname{Zigmārs} % Your first name
 \familyname{Rupenheits} % Your last name
@@ -68,30 +55,34 @@
 \begin{document}
 
 \title{Curriculum Vitae}
-%\address{Slokas 33-15}{}
-\phone[mobile]{(+371) 26291057}
+%\address{}{}
+\social[github]{zigmars}
 \email{zigmarrs@gmail.com}
-\homepage{linkedin.com/in/zrupenheits/}% {LinkedIn.com/in/zrupenheits}% The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
-%\extrainfo{additional information}
+\phone[mobile]{(+371) 26291057}
+\homepage{linkedin.com/in/zrupenheits/} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional info}
 %\photo[70pt][0.4pt]{picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 %\quote{"A witty and playful quotation" - John Smith}
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 
-\makecvtitle % Print the CV title
+\makecvtitle % Output CV title
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
+%	CAREER OBJECTIVES
+%----------------------------------------------------------------------
 \section{Career Objectives}
-\cvitem{}{ Electronics and math enthusiast seeking to deepen \& apply knowledge of control theory, signal analysis, physics, computer science and math in practice by designing state-of-the-art electronic devices. 
-Doing it in a systematic \& structured manner. Constantly learning, striving for efficiency. }
+\cvitem{}{ Electronics and math enthusiast, analyst \& problem solver seeking to deepen \& apply knowledge of control theory, signal analysis, physics, computer science and math in practice by designing and developing useful electronic devices and software. 
+Doing it in a systematic \& structured manner. Constantly learning, striving for improvement in efficiency. }
 
+%----------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------
 \section{Work experience}
 % usage: \cventry[spacing]{years}{degree/job title}{institution/employer}{localization}{optional: grade/...}{optional: comment/job description}
 
-\cventry{2019-present}{Electronics engineer}{Institute of Atomic Physics \& Spectroscopy}{}{}{Medical device system architecture, electronics design \& implementation; supervision of software and case design}
+\cventry{2019-2020}{Electronics engineer}{Institute of Atomic Physics \& Spectroscopy}{}{}{Medical device system architecture, electronics design \& implementation + supervision of software and  mech-hardware (case) design}
 
 \cventry{2018-2019}{Embedded engineer}{AERONES Ltd.}{}{}{Battery management system HW \& FW troubleshooting, improvements and maintenance, creation of drone's electrical wiring documentation, troubleshooting of drone's altitude hold functionality}
 
@@ -99,8 +90,11 @@ Doing it in a systematic \& structured manner. Constantly learning, striving for
 
 \cventry{2014-2015}{Electronics engineer}{Institute of Atomic Physics \& Spectroscopy}{}{}{Hardware and firmware design and maintenance, support of electro-optical devices designed for biomedical measurements}
 
-\cventry{2012-present}{Leader/teacher of Robotics Club}{Riga State Gymnasium No. 1}{}{}{Teaching basics of electronics \& programming and designing DIY mini-sumo robots}
+\cventry{2012-2020}{Leader/teacher of Robotics Club}{Riga State Gymnasium No. 1}{}{}{Teaching basics of electronics \& programming and designing DIY mini-sumo robots}
 
+%----------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------
 \section{Education}
 
 \cventry{2019-ongoing}{B.S. in Electronics engineering}{Riga Technical University}{}{}{}
@@ -109,7 +103,7 @@ Doing it in a systematic \& structured manner. Constantly learning, striving for
 
 \cventry{2012-2015}{B.S. in Physics}{University of Latvia}{}{}{\textbf{Subjects studied}: Classical mechanics, Electromagnestism, Optics, Electronics, Quantum physics, Linear algebra, Numerical methods, Calculus, Differential equations, Tensor calculus \\ \textbf{Thesis (in Quantum mechanics)}: \textit{Modelling of nonstationary dynamics of electron wavepacket}}
 
-\cventry{2009-2012}{Second. ed., Math \& Physics emphasis}{Riga State Gymnasium No. 1}{}{}{\textbf{Extra subjects}: C++ programming, Robotics}
+\cventry{2009-2012}{Second. ed., Math \& Physics emphasis}{Riga State Gymnasium No. 1}{}{}{\textbf{Extra subjects}: C++ programming, Advanced high school computer science, Advanced high school physics, Robotics}
 
 \section{Technical Skillset}
 
@@ -122,6 +116,7 @@ Doing it in a systematic \& structured manner. Constantly learning, striving for
 \cvitem{		   }{ Altium Designer (2 y. experience) }
 \cvitem{		   }{ Eagle CAD (6 y.) }
 \cvitem{		   }{ System troubleshooting and debugging }
+\cvitem{		   }{ Basic FPGA programming }
 %\cvitem{		   }{  }
 
 \cvitem{\textbf{Embedded}}{AVR \& ARM GCC, Make, CMake, STM32 CubeMx}
@@ -132,8 +127,8 @@ Doing it in a systematic \& structured manner. Constantly learning, striving for
 \cvitem{		   }{ Python }
 \cvitem{		   }{ Haskell }
 \cvitem{		   }{ Swift, Scala }
-\cvitem{		   }{ Web Tech: HTML5, CSS3, JS, Ajax, PHP, }
-\cvitem{}{basic use of various APIs, frameworks, such as Vue, jQuery, }
+\cvitem{		   }{ Web Tech fundamentals: HTML5, CSS3, JS, Ajax, PHP, }
+\cvitem{}{basic use of various APIs, frameworks, such as Vue, jQuery }
 %\cvitem{		   }{  }
 %\cvitem{		   }{  }
 
@@ -153,31 +148,33 @@ OpenCV, TensorFlow
 \cvitem{}{	Basic design patterns}
 \cvitem{}{	Debugging, troubleshooting}
 
-\cvitem{\textbf{3D CAD}}{ SolidWorks modelling (5 y. experience), OnShape }
-\cvitem{}{Optimize for 3D printing}
+\cvitem{\textbf{3D CAD}	}{ SolidWorks modelling (5 y. experience), OnShape }
+\cvitem{				}{ Model optimization for 3D printing}
+\cvitem{				}{ Cartesian Bowden-tube 3D printer calibration}
 %\cvitem{}{}
-\cvitem{\textbf{Interpersonal}}{Eager to help others}
-\cvitem{}{cooperative}
-\cvitem{Languages}{Latvian -- native}
-\cvitem{		 }{English -- advanced (level C1) }
-\cvitem{		 }{German --  elementary (level A1)}
+\cvitem{\textbf{Inter-  }}{Eager to help others}
+\cvitem{\textbf{personal}}{Cooperative, friendly}
+\cvitem{				 }{Love to throw around ideas on strategies to improve systems or processes,}
+\cvitem{				 }{ discussing pros \& cons with co-workers}
+%\cvitem{				 }{Striving for team efficiency}
+\cvitem{\textbf{Languages}	}{Latvian -- native}
+\cvitem{		 			}{English -- advanced (level C1) }
+\cvitem{		 			}{German --  elementary (level A1)}
 
 \section{Electronic/embedded projects}
 
 \cvitem{}{CCD-line sensor reading prototype using ATMEGA328P}
 \cvitem{}{Tone synthesizer and sequencer on STM32L476}
-\cvitem{}{Motor control board implementing FOC (field oriented control) of a 3-phase PMSM (permanent magnet synchronous motor). Cancelled project}
+\cvitem{}{Motor control board implementing FOC (field oriented control) of a 3-phase PMSM (permanent magnet synchronous motor). A paused project.}
 \cvitem{}{E-ink display driver board}
-
 
 \section{Personal projects}
 \cvitem{}{Well designed lab power supply (\textit{PSL-3604}) build}
 \cvitem{}{GPSDO setup for calibrating OCXOs}
-\cvitem{}{Miniature (battery powered) 8x8 LED matrix badge}
-\cvitem{}{2-wheel balancing robot}
+\cvitem{}{Miniature (battery powered) 8x8 LED matrix badge HW + SW}
+\cvitem{}{2-wheel balancing robot electronics design}
 \cvitem{}{\textit{Ultra-Micron} dosimeter build}
-\cvitem{}{Card game \textit{SET} for Android}
-
+\cvitem{}{Card game \textit{SET} for Android (JAVA)}
 
 \section{Hobbies and other interests}
 \cvitem{}{Reading about analog circuit design techniques}
@@ -186,6 +183,5 @@ OpenCV, TensorFlow
 \cvitem{}{Solving math, algorithmic \& physics problems}
 \cvitem{}{Listening to jazz, classical and funk music}
 \cvitem{}{Playing acoustic \& electronic music}
-
 
 \end{document}
